@@ -1,0 +1,131 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg-very-dark-blue: hsl(217, 54%, 11%);
+  --card-bg-very-dark-blue: hsl(216, 50%, 16%);
+  --line-very-dark-blue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  font-family: "Outfit", sans-serif;
+  background: var(--main-bg-very-dark-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 800px;
+}
+
+.card {
+  background: var(--card-bg-very-dark-blue);
+  width: 300px;
+  height: 515px;
+  border-radius: 10px;
+}
+
+.ethereum-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  margin: 25px 0 25px 25px;
+}
+
+.card h1 {
+  color: var(--white);
+  font-size: 20px;
+  margin: 0 0 20px 20px;
+}
+
+.card p {
+  color: var(--soft-blue);
+  font-size: 16px;
+  margin: 0 0 20px 20px;
+}
+
+.icons-container {
+  margin: 0 0 15px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.icons-container span {
+  margin-left: 8px;
+}
+
+.eth-quantity {
+  color: var(--cyan);
+}
+
+.days-container {
+  margin-right: 20px;
+}
+
+.days-quantity {
+  color: var(--soft-blue);
+}
+
+hr {
+  background-color: var(--line-very-dark-blue);
+  height: 2px;
+  border-width: 0;
+  margin: 0 20px 0 20px;
+}
+
+.author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 10px 20px 20px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+}
+
+.author-name {
+  color: var(--line-very-dark-blue);
+  padding-top: 5px;
+}
+
+.author-name span {
+  color: var(--white);
+}
+
+.attribution {
+  font-size: 11px;
+  color: var(--line-very-dark-blue);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.attribution a {
+  color: var(--soft-blue);
+}
+/*# sourceMappingURL=style.css.map */
