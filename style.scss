@@ -34,17 +34,53 @@ body {
   border-radius: 10px;
 }
 
-.ethereum-img {
+.images-container {
+  padding-top: 1px;
+  position: relative;
   width: 250px;
+}
+
+.ethereum-img {
+  display: block;
+  width: 100%;
   height: 250px;
   border-radius: 10px;
   margin: 25px 0 25px 25px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 250px;
+  height: 250px;
+  background-color: var(--cyan);
+  border-radius: 10px;
+  opacity: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    opacity: 80%;
+    transition: opacity 0.25s;
+    &:after {
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+  }
 }
 
 .card h1 {
   color: var(--white);
   font-size: 20px;
   margin: 0 0 20px 20px;
+  cursor: pointer;
+  &:hover {
+    color: var(--cyan);
+    transition: opacity 0.25s;
+  }
 }
 
 .card p {
@@ -55,24 +91,35 @@ body {
 
 .icons-container {
   margin: 0 0 15px 20px;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: space-between;
+  margin-right: 20px;
+}
 
-  span {
-    margin-left: 8px;
-  }
+.column-left,
+.column-right {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.column-right {
+  padding-right: 5px;
 }
 
 .eth-quantity {
   color: var(--cyan);
 }
 
-.days-container {
-  margin-right: 20px;
-}
-
 .days-quantity {
   color: var(--soft-blue);
+  font-size: 17px;
+}
+
+.card-icon {
+  padding-top: 5px;
 }
 
 hr {
@@ -96,8 +143,12 @@ hr {
 .author-name {
   color: var(--line-very-dark-blue);
   padding-top: 5px;
+  cursor: pointer;
   span {
     color: var(--white);
+    &:hover {
+      color: var(--cyan);
+    }
   }
 }
 
@@ -106,6 +157,7 @@ hr {
   color: var(--line-very-dark-blue);
   text-align: center;
   position: fixed;
+  left: 0;
   bottom: 0;
   width: 100%;
 }
